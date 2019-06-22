@@ -1,9 +1,18 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
+
+
+
 // import App from './pages/app';
 //
-// ReactDOM.render(<App />, document.getElementById('main'));
-console.log('web/index.ts');
+const appElement = document.getElementById('app');
+// ReactDOM.render(<App />, appElement);
 
 
+
+
+import clear from './tools/console.clear';
+
+console.log(clear);
+clear(3333);
 

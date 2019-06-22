@@ -9,7 +9,9 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
 const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 
-console.log(path.resolve(__dirname, '../src/web/index.tsx'));
+
+console.log('webpack.common.js // loading  ...........................................');
+console.log('webpack.common.js // loading  ...........................................');
 console.log('webpack.common.js // loading  ...........................................');
 module.exports = {
     entry: {
@@ -54,7 +56,6 @@ module.exports = {
             '@components': 'src/web/components',
             '@componentsHeader': 'src/web/components/header',
             '@componentsFooter': 'src/web/components/footer',
-
         },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },
@@ -70,6 +71,7 @@ module.exports = {
         // new ExtractTextPlugin("main.css"),
         new HtmlWebpackPlugin({
             title: Math.random(),
+            filename: "index.html",
             template: path.resolve(__dirname, '../src/web/template.html'),
         }),
     ],
