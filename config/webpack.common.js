@@ -1,18 +1,23 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-console.log(path.resolve(__dirname, '../src/web/components/index.tsx'));
+//  error   handle
+const FriendlyErrorsPlugin = require("friendly-errors-webpack-plugin");
+const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
+
+console.log(path.resolve(__dirname, '../src/web/index.tsx'));
 console.log('webpack.common.js // loading  ...........................................');
 module.exports = {
     entry: {
-        "app": path.resolve(__dirname, '../src/web/components/index.tsx'),
+        "app": path.resolve(__dirname, '../src/web/index.tsx'),
     },
     output: {
         filename: '[name].[hash:8].bundle.js',
-        path: path.resolve(__dirname, '../dist/web/component'),
+        path: path.resolve(__dirname, '../dist/web'),
     },
     devtool: 'inline-source-map',
     module: {
@@ -64,7 +69,7 @@ module.exports = {
         }),
         // new ExtractTextPlugin("main.css"),
         new HtmlWebpackPlugin({
-            title: 'Production',
+            title: Math.random(),
             template: path.resolve(__dirname, '../src/web/template.html'),
         }),
     ],

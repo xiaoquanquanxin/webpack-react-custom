@@ -4,20 +4,30 @@
     //source map
     "sourceMap": true,
     "noImplicitAny": true,
-    //    "module": "es6",//??????? is necessary?
-    "target": "es5",
-    "jsx": "react",
+//        "module": "es6",//??????? is necessary?
+//    "types": ["reflect-metadata","node", "lodash"],
+
     "allowJs": true,
+    "jsx": "react",
+    "target": "es5",
     "lib": ["es6", "dom"],
-    "types": ["reflect-metadata","node", "lodash"],
-    "types": ["node"],
+//    "types": ["reflect-metadata"],
     "module": "commonjs",
     "moduleResolution": "node",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@components/*": [
+        "web/components/*"
+      ]
+    }
   },
   "files": [
-    "./src/web/components/index.tsx"
+    "./src/web/index.tsx"
+  ],
+  "include": [
+    "src"
   ],
   "exclude": [ //排出不编译的目录
     "node_modules",
