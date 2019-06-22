@@ -9,8 +9,11 @@ const appElement = document.getElementById('app');
 // ReactDOM.render(<App />, appElement);
 
 
-// const Loading from '@componentsLogin';
-// console.log(Loading);
+import Loading from '@componentsLogin';
+console.log(Loading);
+ReactDOM.render(<Loading />, appElement);
+
+
 
 
 import clear from './tools/console.clear';
