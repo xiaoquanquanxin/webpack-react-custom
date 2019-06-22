@@ -1,3 +1,18 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
@@ -55,6 +70,9 @@ module.exports = {
             '@root': '.',
             "@components": path.resolve("src/web/components"),
             "@componentsLogin": path.resolve("src/web/components/login"),
+            "@componentsHeader": path.resolve("src/web/components/header"),
+            "@componentsFooter": path.resolve("src/web/components/footer"),
+            "@routes": path.resolve("src/web/routes"),
          },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },
@@ -74,4 +92,11 @@ module.exports = {
             template: path.resolve(__dirname, '../src/web/template.html'),
         }),
     ],
+    // externals: {
+    //     react: "React",
+    //     "react-router-dom": "ReactRouterDOM",
+    //     mobx: "mobx"
+    //     // "mobx-react-lite": "mobx-react-lite"
+    // },
+
 };

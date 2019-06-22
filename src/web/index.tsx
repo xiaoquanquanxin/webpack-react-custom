@@ -2,20 +2,24 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
 
-
-// import App from './pages/app';
-//
-const appElement = document.getElementById('app');
-// ReactDOM.render(<App />, appElement);
-
-
+import Header from '@componentsHeader';
+import Footer from '@componentsFooter';
 import Loading from '@componentsLogin';
-console.log(Loading);
-ReactDOM.render(<Loading />, appElement);
 
 
+import Routes from "@routes";
+
+
+const appElement = document.getElementById('app');
+
+ReactDOM.render(<>
+<Header/>
+<Loading/>
+<Footer/>
+</>, appElement);
 
 
 import clear from './tools/console.clear';
+
 clear(3333);
 
