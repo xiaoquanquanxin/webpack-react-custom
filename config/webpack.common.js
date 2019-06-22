@@ -56,6 +56,7 @@ module.exports = {
             '@components': 'src/web/components',
             '@componentsHeader': 'src/web/components/header',
             '@componentsFooter': 'src/web/components/footer',
+            '@componentsLogin': 'src/web/components/login',
         },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },

@@ -9,10 +9,10 @@ const appElement = document.getElementById('app');
 // ReactDOM.render(<App />, appElement);
 
 
+// const Loading from '@componentsLogin';
+// console.log(Loading);
 
 
 import clear from './tools/console.clear';
-
-console.log(clear);
 clear(3333);
 
