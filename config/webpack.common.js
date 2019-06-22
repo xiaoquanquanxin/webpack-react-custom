@@ -53,11 +53,9 @@ module.exports = {
     resolve: {
         alias: {
             '@root': '.',
-            '@components': 'src/web/components',
-            '@componentsHeader': 'src/web/components/header',
-            '@componentsFooter': 'src/web/components/footer',
-            '@componentsLogin': 'src/web/components/login',
-        },
+            "@components": path.resolve("src/web/components"),
+            "@componentsLogin": path.resolve("src/web/components/login"),
+         },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },
     plugins: [
