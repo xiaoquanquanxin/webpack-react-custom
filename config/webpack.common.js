@@ -4,15 +4,15 @@ const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 // const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-console.log(path.resolve(__dirname, '../src/web/index.tsx'));
+console.log(path.resolve(__dirname, '../src/web/components/index.tsx'));
 console.log('webpack.common.js // loading  ...........................................');
 module.exports = {
     entry: {
-        "app": path.resolve(__dirname, '../src/web/index.tsx'),
+        "app": path.resolve(__dirname, '../src/web/components/index.tsx'),
     },
     output: {
         filename: '[name].[hash:8].bundle.js',
-        path: path.resolve(__dirname, '../dist/web'),
+        path: path.resolve(__dirname, '../dist/web/component'),
     },
     devtool: 'inline-source-map',
     module: {
@@ -44,6 +44,13 @@ module.exports = {
         ]
     },
     resolve: {
+        alias: {
+            '@root': '.',
+            '@components': 'src/web/components',
+            '@componentsHeader': 'src/web/components/header',
+            '@componentsFooter': 'src/web/components/footer',
+
+        },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },
     plugins: [
@@ -61,11 +68,4 @@ module.exports = {
             template: path.resolve(__dirname, '../src/web/template.html'),
         }),
     ],
-    alias: {
-        '@root': '.',
-        '@components': 'src/web/components',
-        '@componntesHeader': 'src/web/components/header',
-        '@componntesFooter': 'src/web/components/footer',
-
-    }
 };

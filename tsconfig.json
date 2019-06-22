@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    //source map
+    "sourceMap": true,
+    "noImplicitAny": true,
+    //    "module": "es6",//??????? is necessary?
+    "target": "es5",
+    "jsx": "react",
+    "allowJs": true,
+    "lib": ["es6", "dom"],
+    "types": ["reflect-metadata","node", "lodash"],
+    "types": ["node"],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "files": [
+    "./src/web/components/index.tsx"
+  ],
+  "exclude": [ //排出不编译的目录
+    "node_modules",
+    "**/*.spec.ts"
+  ]
+}
