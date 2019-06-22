@@ -1,5 +1,5 @@
 import * as React from "react";
 const Loading = () => {
-    return <span>加载中...</span>;
+    return <><h3>登录页</h3></>;
 };
 export default Loading;
