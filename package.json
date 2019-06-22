@@ -19,6 +19,8 @@
   },
   "homepage": "https://github.com/xiaoquanquanxin/webpack-react-custom#readme",
   "devDependencies": {
+    "@types/node": "^12.0.8",
+    "@types/react": "^16.8.22",
     "@babel/core": "^7.4.5",
     "babel-loader": "^8.0.6",
     "clean-webpack-plugin": "^3.0.0",
@@ -38,6 +40,7 @@
   },
   "dependencies": {
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "reflect-metadata": "^0.1.13"
   }
 }
