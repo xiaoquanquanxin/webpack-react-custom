@@ -9,6 +9,8 @@ import Loading from '@componentsLogin';
 
 import Routes from "@routes";
 
+console.log(Routes);
+
 
 const appElement = document.getElementById('app');
 
