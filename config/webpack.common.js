@@ -20,6 +20,7 @@ module.exports = {
     output: {
         filename: '[name].[hash:8].bundle.js',
         path: path.resolve(__dirname, '../dist/web'),
+        publicPath: '/'
     },
     devtool: 'inline-source-map',
     module: {
@@ -86,11 +87,11 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-    //     contentBase: path.join(__dirname, "../dist"),
-    //     proxy: {
-    //         "/api": "http://localhost:3000"
-    //     },
-    //     hot: true,
-    //     quiet: true // necessary for FriendlyErrorsPlugin
+        //     contentBase: path.join(__dirname, "../dist"),
+        //     proxy: {
+        //         "/api": "http://localhost:3000"
+        //     },
+        //     hot: true,
+        //     quiet: true // necessary for FriendlyErrorsPlugin
     },
 };

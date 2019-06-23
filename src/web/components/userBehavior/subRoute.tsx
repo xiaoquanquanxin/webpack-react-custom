@@ -5,7 +5,6 @@ import {
 } from 'react-router-dom'
 
 function SubRoute({rootRoute}) {
-    console.log(rootRoute);
     return (
         <ul className={'clear'}>
             <li>
