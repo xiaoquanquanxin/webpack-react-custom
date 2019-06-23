@@ -53,6 +53,7 @@ module.exports = {
             "@components": path.resolve("src/web/components"),
             "@componentsLogin": path.resolve("src/web/components/login"),
             "@componentsContentPage": path.resolve("src/web/components/contentPage"),
+            "@componentsUserBehavior": path.resolve("src/web/components/userBehavior"),
             "@componentsHeader": path.resolve("src/web/components/header"),
             "@componentsFooter": path.resolve("src/web/components/footer"),
             "@componentsHomePage": path.resolve("src/web/components/home"),

@@ -36,6 +36,9 @@
       "@componentsContentPage": [
         "web/components/ContentPage"
       ],
+      "@componentsUserBehavior": [
+        "web/components/userBehavior"
+      ],
       "@componentsHeader": [
         "web/components/header"
       ],

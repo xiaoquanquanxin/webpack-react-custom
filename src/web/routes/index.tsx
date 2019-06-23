@@ -10,6 +10,9 @@ const Login = lazy(() =>
 const ContentPage = lazy(() =>
     import(/* webpackChunkName:"contentpage" */"@componentsContentPage"),
 );
+const UserBehavior = lazy(() =>
+    import(/* webpackChunkName:"contentpage" */"@componentsUserBehavior"),
+);
 
 export const routes: RouteProps[] = [
     {
@@ -26,6 +29,10 @@ export const routes: RouteProps[] = [
         path: "/contentpage",
         exact: true,
         component: ContentPage,
+    }, {
+        path: "/userBehavior",
+        exact: true,
+        component: UserBehavior,
     },
 ];
 
