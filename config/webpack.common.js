@@ -25,14 +25,11 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
+                test: /\.(js|jsx|ts|tsx)$/,
+                include: [path.resolve("src")],
+                // use: 'ts-loader',
+                loader: "babel-loader",
                 exclude: /node_modules/
-            },
-            {
-                test: /\.js$/,
-                use: ['babel-loader'],
-                exclude: '/node_moduels/'
             },
             {
                 test: /\.css$/,
@@ -55,13 +52,16 @@ module.exports = {
             '@root': '.',
             "@components": path.resolve("src/web/components"),
             "@componentsLogin": path.resolve("src/web/components/login"),
+            "@componentsContentPage": path.resolve("src/web/components/contentPage"),
             "@componentsHeader": path.resolve("src/web/components/header"),
             "@componentsFooter": path.resolve("src/web/components/footer"),
+            "@componentsHomePage": path.resolve("src/web/components/home"),
             "@routes": path.resolve("src/web/routes"),
         },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },
     plugins: [
+        new webpack.HotModuleReplacementPlugin(),
         // new CleanWebpackPlugin(['dist/*']) for < v2 versions of CleanWebpackPlugin
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({
@@ -73,7 +73,7 @@ module.exports = {
         // new ExtractTextPlugin("main.css"),
         new HtmlWebpackPlugin({
             title: Math.random(),
-            filename: "index.html",
+            // filename: "index.html",
             template: path.resolve(__dirname, '../src/web/template.html'),
         }),
     ],
@@ -83,5 +83,13 @@ module.exports = {
         mobx: "mobx"
         // "mobx-react-lite": "mobx-react-lite"
     },
-
+    devServer: {
+        historyApiFallback: true,
+    //     contentBase: path.join(__dirname, "../dist"),
+    //     proxy: {
+    //         "/api": "http://localhost:3000"
+    //     },
+    //     hot: true,
+    //     quiet: true // necessary for FriendlyErrorsPlugin
+    },
 };

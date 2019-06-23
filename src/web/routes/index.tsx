@@ -1,52 +1,52 @@
 import * as React from "react";
 import {Route, Switch, RouteProps} from "react-router-dom";
-import Loading from "@componentsLogin";
-const { lazy, Suspense } = React;
+import HomePage from "@componentsHomePage";
 
-// const {lazy, Suspense} = React;
+const {lazy, Suspense} = React;
 
-// const Demo = lazy(() =>
-//     import(/* webpackChunkName:"demo" */ "@components/demo"),
-// );
-// const Login = lazy(() =>
-//     import(/* webpackChunkName:"login" */ "@components/login"),
-// );
+const Login = lazy(() =>
+    import(/* webpackChunkName:"login" */"@componentsLogin"),
+);
+const ContentPage = lazy(() =>
+    import(/* webpackChunkName:"contentpage" */"@componentsContentPage"),
+);
 
 export const routes: RouteProps[] = [
     {
         path: "/",
         exact: true,
-        component: Loading,
+        component: HomePage,
     },
-    // {
-    //     path: "/login",
-    //     exact: true,
-    //     component: Login,
-    // },
-    // {
-    //     path: "/demos",
-    //     exact: true,
-    //     component: Demo,
-    // },
+    {
+        path: "/login",
+        exact: true,
+        component: Login,
+    },
+    {
+        path: "/contentpage",
+        exact: true,
+        component: ContentPage,
+    },
 ];
 
 const Routes = () => (
-    <Suspense fallback={<span>xxxxxxxxxx</span>}>
-     <Switch>
-      <Route exact path="/" component={Loading}/>
-         {/*{routes.map((r) => {*/}
-             {/*const { path, exact, component } = r;*/}
-             {/*const LazyCom = component;*/}
-             {/*return (*/}
-                 {/*<Route*/}
-                     {/*key={`${path}`}*/}
-                     {/*exact={exact}*/}
-                     {/*path={path}*/}
-                     {/*render={() => <LazyCom />}*/}
-                 {/*/>*/}
-             {/*);*/}
-         {/*})}*/}
-     </Switch>
+    <Suspense fallback={<span>xxx</span>}>
+        <Switch>
+            {routes.map((r) => {
+                console.log(r);
+                const {path, exact, component} = r;
+                const LazyCom = component;
+                return (
+                    <Route
+                        key={`${path}`}
+                        exact={exact}
+                        path={path}
+                        render={() => <LazyCom/>}
+                    />
+
+                );
+            })}
+        </Switch>
     </Suspense>
 );
 

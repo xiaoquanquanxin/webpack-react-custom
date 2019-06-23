@@ -1,4 +1,16 @@
 li {
     list-style-type: none;
     float: left;
+    margin: 0 10px;
+}
+
+a:hover, a:active, a:link, a:link, a {
+    color: blue;
+    text-decoration: none;
+}
+
+.clear::after {
+    clear: both;
+    display: block;
+    content: '';
 }

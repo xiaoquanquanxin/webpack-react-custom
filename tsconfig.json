@@ -26,8 +26,15 @@
       "@components/*": [
         "web/components/*"
       ],
+      "@componentsHomePage": [
+        "web/components/home"
+      ],
+
       "@componentsLogin": [
         "web/components/login"
+      ],
+      "@componentsContentPage": [
+        "web/components/ContentPage"
       ],
       "@componentsHeader": [
         "web/components/header"

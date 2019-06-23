@@ -1,7 +1,8 @@
 import * as React from "react";
+import './index.css';
 function Header() {
     return (
-        <ul>
+        <ul className={'clear'}>
             <li>
                 <a href="/">首页</a>
             </li>
@@ -9,7 +10,7 @@ function Header() {
                 <a href="/login">登录</a>
             </li>
             <li>
-                <a href="/demos">其他</a>
+                <a href="/contentPage">其他</a>
             </li>
         </ul>
     );

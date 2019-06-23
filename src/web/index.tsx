@@ -14,8 +14,3 @@ ReactDOM.render(
     <Footer/>
     </>, appElement);
 
-
-import clear from './tools/console.clear';
-
-clear(3333);
-

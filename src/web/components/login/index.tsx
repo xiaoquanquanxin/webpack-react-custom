@@ -1,5 +1,5 @@
 import * as React from "react";
-const Loading = () => {
+const Login = () => {
     return <><h3>登录页</h3></>;
 };
-export default Loading;
+export default Login;
