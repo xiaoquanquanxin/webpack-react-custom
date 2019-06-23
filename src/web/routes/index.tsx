@@ -13,19 +13,20 @@ const ContentPage = lazy(() =>
 const UserBehavior = lazy(() =>
     import(/* webpackChunkName:"contentpage" */"@componentsUserBehavior"),
 );
+const UserBehaviorABC = lazy(() =>
+    import(/* webpackChunkName:"contentpage" */"@componentsUserBehavior/abc"),
+);
 
 export const routes: RouteProps[] = [
     {
         path: "/",
         exact: true,
         component: HomePage,
-    },
-    {
+    }, {
         path: "/login",
         exact: true,
         component: Login,
-    },
-    {
+    }, {
         path: "/contentpage",
         exact: true,
         component: ContentPage,
@@ -33,6 +34,14 @@ export const routes: RouteProps[] = [
         path: "/userBehavior",
         exact: true,
         component: UserBehavior,
+        children: [
+            {
+                parent: '/userBehavior',
+                path: '/abc',
+                exact: true,
+                component: UserBehaviorABC
+            }
+        ]
     },
 ];
 
@@ -50,7 +59,6 @@ const Routes = () => (
                         path={path}
                         render={() => <LazyCom/>}
                     />
-
                 );
             })}
         </Switch>
