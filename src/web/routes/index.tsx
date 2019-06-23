@@ -1,6 +1,7 @@
-// import * as React from "react";
-// import {Route, Switch, RouteProps} from "react-router-dom";
-// import Loading from "@componentsLogin";
+import * as React from "react";
+import {Route, Switch, RouteProps} from "react-router-dom";
+import Loading from "@componentsLogin";
+const { lazy, Suspense } = React;
 
 // const {lazy, Suspense} = React;
 
@@ -11,6 +12,42 @@
 //     import(/* webpackChunkName:"login" */ "@components/login"),
 // );
 
- const Routes: number[] = [1, 1, 2, 3, 5];
+export const routes: RouteProps[] = [
+    {
+        path: "/",
+        exact: true,
+        component: Loading,
+    },
+    // {
+    //     path: "/login",
+    //     exact: true,
+    //     component: Login,
+    // },
+    // {
+    //     path: "/demos",
+    //     exact: true,
+    //     component: Demo,
+    // },
+];
+
+const Routes = () => (
+    <Suspense fallback={<span>xxxxxxxxxx</span>}>
+     <Switch>
+      <Route exact path="/" component={Loading}/>
+         {/*{routes.map((r) => {*/}
+             {/*const { path, exact, component } = r;*/}
+             {/*const LazyCom = component;*/}
+             {/*return (*/}
+                 {/*<Route*/}
+                     {/*key={`${path}`}*/}
+                     {/*exact={exact}*/}
+                     {/*path={path}*/}
+                     {/*render={() => <LazyCom />}*/}
+                 {/*/>*/}
+             {/*);*/}
+         {/*})}*/}
+     </Switch>
+    </Suspense>
+);
 
 export default Routes;
