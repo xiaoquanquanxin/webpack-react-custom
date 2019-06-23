@@ -11,7 +11,7 @@ export class Todos {
         return this.todos.filter(t => !t.completed).length;
     }
 
-    toggleTodo = (   item) => {
+    toggleTodo = (item) => {
         item.completed = !item.completed;
     };
 }
