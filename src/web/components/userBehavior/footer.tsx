@@ -1,12 +1,11 @@
 import * as React from "react";
 
-const Footer = ({ remaining, total }) => {
+const Footer = ({ active, total }) => {
   return (
-    <p>
-      {remaining} / {total} left
-    </p>
+    <div>
+      {active} / {total}
+    </div>
   );
 };
-
 
 export default Footer;
