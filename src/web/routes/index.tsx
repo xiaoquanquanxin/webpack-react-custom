@@ -37,10 +37,6 @@ export const routes: RouteProps[] = [
         //   }
         // ]
     }, {
-        path: "/",
-        exact: true,
-        component: HomePage,
-    }, {
         path: "/login",
         exact: true,
         component: Login,
@@ -67,11 +63,9 @@ const Routes = () => (
     <Suspense fallback={<span>xxx</span>}>
         <Switch>
             {routes.map((r) => {
-                // console.log(r);
                 const token = "";
                 const {path, exact, component} = r;
-                console.log(r);
-                console.log(!r.auth);
+                // console.log(r.auth);
                 const LazyCom = component;
                 return (
                     <Route
