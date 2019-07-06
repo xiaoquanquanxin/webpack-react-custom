@@ -9,7 +9,7 @@ interface MyInputInterface {
 }
 
 const MyInput = (params: MyInputInterface) => {
-    console.log(params.label);
+    // console.log(params.label);
     return <>
         <label htmlFor={params.id} className='my-input-label'>
             <span>{params.label}</span>
@@ -21,14 +21,14 @@ const MyInput = (params: MyInputInterface) => {
 };
 
 interface MyButtonInterface {
-    type: string,
+    type: 'button' | 'reset' | 'submit',
     label: string,
 }
 
 const MyButton = (params: MyButtonInterface) => {
     return <>
         <label className='my-input-label clear'>
-            <button className='fr'>{params.label}</button>
+            <button className='fr' type={params.type}>{params.label}</button>
         </label>
     </>;
 };
