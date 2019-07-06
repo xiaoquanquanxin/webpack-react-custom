@@ -3,6 +3,9 @@
     height: 100%;
     width: 100%;
     background-color: darkgreen;
+    background-image: url("https://ss0.bdstatic.com/94oJfD_bAAcT8t7mm9GUKT-xh_/timg?image&quality=100&size=b4000_4000&sec=1562403905&di=9ab681e481d12eca7a0cef9e60e75aaa&src=http://5b0988e595225.cdn.sohucs.com/images/20180617/04225111082242b798912ac0f8dd6894.jpeg");
+    background-position: center center;
+    background-size: cover;
     top: 0;
     left: 0;
     z-index: +100;
@@ -11,7 +14,7 @@
 .login-form {
     margin: 100px auto;
     width: 200px;
-    background-color: forestgreen;
+    background-color: rgba(34, 139, 34, 0.81);
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid green;
