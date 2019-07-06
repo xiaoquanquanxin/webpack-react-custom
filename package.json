@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --inline --progress --config config/webpack.dev.js",
     "client:dev": "scripty",
     "client:server": "scripty",
     "client:prod": "scripty"
@@ -62,6 +63,7 @@
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "postcss-preset-env": "^6.6.0",
+    "progress-bar-webpack-plugin": "^1.12.1",
     "scripty": "^1.9.1",
     "ts-jest": "^24.0.2",
     "tslint": "^5.18.0",
