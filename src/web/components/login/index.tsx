@@ -5,7 +5,7 @@ import {MyInput, MyButton} from '../input';
 const Login = () => {
     return <>
         <div className="components-login">
-            <form className='login-form' action='/abc'>
+            <form className='login-form' action='/loginindex' method='post'>
                 <h2>登陆</h2>
                 <MyInput type='text' id='username' label='用户名' autofocus={true}/>
                 <MyInput type='password' id='password' label='密码' autofocus={false}/>

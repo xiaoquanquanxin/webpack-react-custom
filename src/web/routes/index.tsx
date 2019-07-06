@@ -56,7 +56,11 @@ export const routes: RouteProps[] = [
                 component: UserBehaviorABC
             }
         ]
-    },
+    }, {
+        path: '*',
+        exact: true,
+        component: ContentPage
+    }
 ];
 
 const Routes = () => (
