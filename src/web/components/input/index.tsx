@@ -13,7 +13,7 @@ const MyInput = (params: MyInputInterface) => {
     return <>
         <label htmlFor={params.id} className='my-input-label'>
             <span>{params.label}</span>
-            <input id={params.id} type={params.type} className='my-input-input fr' autoFocus={params.autofocus}/>
+            <input name={params.type} id={params.id} type={params.type} className='my-input-input fr' autoFocus={params.autofocus}/>
         </label>
         <br/>
         <br/>
