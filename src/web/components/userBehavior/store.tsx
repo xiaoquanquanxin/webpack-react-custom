@@ -11,12 +11,13 @@ export class Todos {
         return this.todos.filter(t => !t.completed).length;
     }
 
-    toggleTodo = (item) => {
+    toggleTodo = (item:any) => {
         item.completed = !item.completed;
     };
 }
 
 decorate(Todos, {
+    //  @ts-ignore
     todos: observable,
     id: observable,
     activeTodos: computed,
