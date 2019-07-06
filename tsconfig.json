@@ -45,6 +45,9 @@
       "@componentsFooter": [
         "web/components/footer"
       ],
+      "@componentsNotfound": [
+        "web/components/notfound"
+      ],
       "@routes": [
         "web/routes"
       ]
