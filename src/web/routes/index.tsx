@@ -111,4 +111,4 @@ function getToken() {
     return "";
 }
 
-export default Routes;
+export {Routes};
