@@ -2,6 +2,7 @@ import * as React from "react";
 import "./index.css";
 import {MyInput, MyButton} from '../input';
 
+alert('登录');
 const Login = () => {
     return <>
         <div className="components-login">
