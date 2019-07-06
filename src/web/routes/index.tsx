@@ -30,36 +30,22 @@ export const routes: RouteProps[] = [
         exact: true,
         component: HomePage,
         auth: true
-        // children: [
-        //   {
-        //     path: "/aa",
-        //     component: Demo
-        //   }
-        // ]
     }, {
         path: "/login",
-        exact: true,
         component: Login,
     }, {
         path: "/contentpage",
-        exact: true,
         component: ContentPage,
     }, {
         path: "/userBehavior",
-        exact: true,
         component: UserBehavior,
         children: [
             {
                 parent: '/userBehavior',
-                path: '/abc',
-                exact: true,
+                path: "/abc",
                 component: UserBehaviorABC
             }
         ]
-        // }, {
-        //     path: '*',
-        //     exact: true,
-        //     component: ContentPage
     }
 ];
 
@@ -69,7 +55,7 @@ const Routes = () => (
             {routes.map((r) => {
                 const token = getToken();
                 const {path, exact, component} = r;
-                console.log(r.path);
+                // console.log(r.path);
                 const LazyCom = component;
                 return (
                     <Route
