@@ -65,7 +65,7 @@ const Routes = () => (
             {routes.map((r) => {
                 const token = "";
                 const {path, exact, component} = r;
-                // console.log(r.auth);
+                console.log(r.path);
                 const LazyCom = component;
                 return (
                     <Route
