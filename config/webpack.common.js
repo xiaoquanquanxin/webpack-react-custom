@@ -13,6 +13,21 @@ const WebpackBuildNotifierPlugin = require("webpack-build-notifier");
 console.log('webpack.common.js // loading  ...........................................');
 console.log('webpack.common.js // loading  ...........................................');
 console.log('webpack.common.js // loading  ...........................................');
+
+
+let cssLoaders = [
+    MiniCssExtractPlugin.loader,
+    {
+        loader: "css-loader",
+        options: {
+            importLoaders: 1
+        }
+    },
+    {
+        loader: "postcss-loader"
+    }
+];
+
 module.exports = {
     entry: {
         "app": path.resolve(__dirname, '../src/web/index.tsx'),
@@ -28,24 +43,16 @@ module.exports = {
             {
                 test: /\.(js|jsx|ts|tsx)$/,
                 include: [path.resolve("src")],
-                // use: 'ts-loader',
-                loader: "babel-loader",
-                exclude: /node_modules/
+                exclude: /node_modules/,
+                loader: "babel-loader"
+                // loader:"awesome-typescript-loader"
             },
             {
                 test: /\.css$/,
-                use: [
-                    {
-                        loader: MiniCssExtractPlugin.loader,
-                        options: {
-                            // you can specify a publicPath here
-                            // by default it use publicPath in webpackOptions.output
-                            publicPath: '../'
-                        }
-                    },
-                    "css-loader"
-                ]
-            }
+                //include: [resolve("src")], //限制范围，提高打包速度
+                // exclude: /node_modules/,
+                use: cssLoaders
+            },
         ]
     },
     resolve: {

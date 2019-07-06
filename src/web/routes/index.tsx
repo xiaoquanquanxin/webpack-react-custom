@@ -72,7 +72,7 @@ const Routes = () => (
                         key={`${path}`}
                         path={path}
                         exact={exact}
-                        render={(props:object) =>
+                        render={(props: object) =>
                             !r.auth ? (
                                 <LazyCom {...props} />
                             ) : token ? (
@@ -82,7 +82,7 @@ const Routes = () => (
                                     to={{
                                         pathname: "/login",
                                         //  @ts-ignore
-                                        state: { from: props.location }
+                                        state: {from: props.location}
                                     }}
                                 />
                             )
