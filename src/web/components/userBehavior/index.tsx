@@ -4,6 +4,7 @@ import {observer} from "mobx-react-lite";
 import TodoStore from "./store";
 import TodoList from "./TodoList";
 import Footer from "./footer";
+import Header from '@componentsHeader';
 
 const {useContext, Suspense, Component, lazy} = React;
 
@@ -46,7 +47,9 @@ const Routes = () => (
 const UserBehavior = observer(() => {
     const store = useContext(TodoStore);
     return (
-        <><h3> user behavior </h3>
+        <>
+            <Header/>
+            <h3> user behavior </h3>
         <div>
             <TodoList todos={store.todos} toggleTodo={store.toggleTodo}/>
             <Footer active={store.activeTodos} total={store.todos.length}/>
