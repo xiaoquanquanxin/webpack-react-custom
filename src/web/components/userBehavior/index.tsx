@@ -1,4 +1,5 @@
 import * as React from "react";
+//  @ts-ignore
 import {BrowserRouter, Switch, Route, RouteProps} from "react-router-dom";
 import {observer} from "mobx-react-lite";
 import TodoStore from "./store";
@@ -10,6 +11,7 @@ const {useContext, Suspense, Component, lazy} = React;
 
 
 const UserBehaviorABC = lazy(() =>
+    //  @ts-ignore
     import(/* webpackChunkName:"contentpage" */"@componentsUserBehavior/abc"),
 );
 console.log(UserBehaviorABC);

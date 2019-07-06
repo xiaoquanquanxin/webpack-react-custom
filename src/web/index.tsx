@@ -1,17 +1,17 @@
 import * as React from 'react';
+//  @ts-ignore
 import * as ReactDOM from 'react-dom';
 
-import Header from '@componentsHeader';
-import Footer from '@componentsFooter';
-import App from './page';
+
+import {Footer} from '@componentsFooter';
+import {App} from './page';
 
 const appElement = document.getElementById('app');
 
 ReactDOM.render(
     <>
-    <Header/>
-    <App/>
-    <Footer/>
+        <App/>
+        <Footer/>
     </>, appElement);
 
 
