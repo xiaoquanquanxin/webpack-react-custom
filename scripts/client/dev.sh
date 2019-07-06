@@ -1,0 +1,1 @@
+webpack --inline  --config config/webpack.dev.js --mode development
