@@ -58,6 +58,7 @@ module.exports = {
             "@componentsHeader": path.resolve("src/web/components/header"),
             "@componentsFooter": path.resolve("src/web/components/footer"),
             "@componentsHomePage": path.resolve("src/web/components/home"),
+            "@componentsNotfound": path.resolve("src/web/components/notfound"),
             "@routes": path.resolve("src/web/routes"),
         },
         extensions: ['.tsx', '.ts', '.js', '.css']
@@ -87,11 +88,11 @@ module.exports = {
     },
     devServer: {
         historyApiFallback: true,
-        //     contentBase: path.join(__dirname, "../dist"),
-        //     proxy: {
-        //         "/api": "http://localhost:3000"
-        //     },
-        //     hot: true,
-        //     quiet: true // necessary for FriendlyErrorsPlugin
+        contentBase: path.join(__dirname, "../dist"),
+        proxy: {
+            "/api": "http://localhost:3000"
+        },
+        hot: true,
+        quiet: true // necessary for FriendlyErrorsPlugin
     },
 };
