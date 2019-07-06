@@ -1,10 +1,10 @@
 import * as React from "react";
 
-function TodoList({todos, toggleTodo}) {
+function TodoList({todos, toggleTodo}:any) {
     return (
         <ul className={'clear'}>
             {todos &&
-            todos.map((item) => (
+            todos.map((item:any) => (
                 <li
                     onClick={() => toggleTodo(item)}
                     style={{
