@@ -7,8 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:dev": "scripty",
     "client:server": "scripty",
-    "client:prod": "scripty",
-    "prod:server": "webpack-dev-server  --inline --progress --config config/webpack.prod.js"
+    "client:prod": "scripty"
   },
   "repository": {
     "type": "git",
@@ -22,6 +21,14 @@
   "homepage": "https://github.com/xiaoquanquanxin/webpack-react-custom#readme",
   "devDependencies": {
     "babel-runtime": "^6.26.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-tslint": "^8.1.4",
+    "gulp-typescript": "^5.0.1",
+    "inversify-koa-utils": "^1.0.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-static": "^5.0.0",
+    "koa-swig": "^2.2.1",
     "transform-runtime": "^0.0.0"
   },
   "dependencies": {
