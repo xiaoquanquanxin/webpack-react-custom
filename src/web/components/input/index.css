@@ -1,0 +1,25 @@
+.my-input-label {
+    cursor: pointer;
+
+
+}
+
+
+.my-input-input {
+    border: 4px solid grey;
+}
+
+.fl {
+    float: left;
+
+}
+
+.fr {
+    float: right;
+}
+
+.clear ::after{
+    display: block;
+    content: '';
+    clear: both;
+}

@@ -1,0 +1,25 @@
+.components-login {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: darkgreen;
+    top: 0;
+    left: 0;
+    z-index: +100;
+}
+
+.login-form {
+    margin: 100px auto;
+    width: 200px;
+    background-color: forestgreen;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid green;
+    box-shadow: 4px 4px 4px #003000;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
