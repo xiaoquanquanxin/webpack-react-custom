@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "client:dev": "scripty",
     "client:server": "scripty",
-    "prod": "webpack --config config/webpack.prod.js",
+    "client:prod": "scripty",
     "prod:server": "webpack-dev-server  --inline --progress --config config/webpack.prod.js"
   },
   "repository": {
