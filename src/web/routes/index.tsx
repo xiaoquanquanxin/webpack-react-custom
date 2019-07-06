@@ -56,10 +56,10 @@ export const routes: RouteProps[] = [
                 component: UserBehaviorABC
             }
         ]
-    }, {
-        path: '*',
-        exact: true,
-        component: ContentPage
+        // }, {
+        //     path: '*',
+        //     exact: true,
+        //     component: ContentPage
     }
 ];
 
@@ -67,7 +67,7 @@ const Routes = () => (
     <Suspense fallback={<span>xxx</span>}>
         <Switch>
             {routes.map((r) => {
-                const token = "";
+                const token = getToken();
                 const {path, exact, component} = r;
                 console.log(r.path);
                 const LazyCom = component;
@@ -98,5 +98,17 @@ const Routes = () => (
         </Switch>
     </Suspense>
 );
+
+//  获取token
+function getToken() {
+    const tokenArr = document.cookie.split("; ");
+    for (let i = 0; i < tokenArr.length; i++) {
+        const arr = tokenArr[i].split("=");
+        if (arr[0] === "token") {
+            return arr[1];
+        }
+    }
+    return "";
+}
 
 export default Routes;
