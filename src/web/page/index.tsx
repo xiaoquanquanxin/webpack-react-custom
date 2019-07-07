@@ -1,11 +1,10 @@
 import * as React from "react";
 import {Routes} from "@routes";
-const { Component } = React;
 //  @ts-ignore
-import { BrowserRouter, Route } from "react-router-dom";
+import {BrowserRouter} from "react-router-dom";
 
-const App = () => {
+const Page = () => {
     return <BrowserRouter basename="/">{Routes()}</BrowserRouter>;
 };
-export   {App};
+export {Page};
 
