@@ -7,7 +7,7 @@ interface RootRoute {
 }
 
 function SubRoute(params: RootRoute) {
-    console.log(params.rootRoute)
+    // console.log(params.rootRoute)
     return (
         <ul className={'clear'}>
             <li><NavLink to={params.rootRoute}>行为的首页,自路由不能用啊</NavLink></li>
