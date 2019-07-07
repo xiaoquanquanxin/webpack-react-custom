@@ -5,7 +5,6 @@ import {observer} from "mobx-react-lite";
 import TodoStore from "./store";
 import TodoList from "./TodoList";
 import Footer from "./footer";
-import Header from '@componentsHeader';
 
 const {useContext, Suspense, Component, lazy} = React;
 
@@ -30,7 +29,7 @@ const Routes = () => (
     <Suspense fallback={<span>xxx</span>}>
         <Switch>
             {routes.map((r) => {
-                console.log(r);
+                // console.log(r);
                 const {path, exact, component, children} = r;
                 const LazyCom = component;
                 return (
@@ -50,7 +49,6 @@ const UserBehavior = observer(() => {
     const store = useContext(TodoStore);
     return (
         <>
-            <Header/>
             <h3> user behavior </h3>
         <div>
             <TodoList todos={store.todos} toggleTodo={store.toggleTodo}/>

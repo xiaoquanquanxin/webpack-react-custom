@@ -48,6 +48,9 @@
       "@componentsNotfound": [
         "web/components/notfound"
       ],
+      "@componentsLoginSuccess": [
+        "web/components/loginSuccess"
+      ],
       "@routes": [
         "web/routes"
       ]
