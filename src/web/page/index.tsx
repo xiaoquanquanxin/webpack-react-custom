@@ -3,8 +3,13 @@ import {Routes} from "@routes";
 //  @ts-ignore
 import {BrowserRouter} from "react-router-dom";
 
-const Page = () => {
-    return <BrowserRouter basename="/">{Routes()}</BrowserRouter>;
-};
-export {Page};
+const {useContext} = React;
+import YdStore from "@models/YdStore";
+import {observer} from "mobx-react-lite";
 
+const Page = observer(() => {
+    const ydstore = useContext(YdStore);
+    const token = ydstore.token;
+    return <BrowserRouter basename="/">{Routes(token)}</BrowserRouter>;
+});
+export {Page};

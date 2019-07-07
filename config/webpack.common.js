@@ -68,6 +68,7 @@ module.exports = {
             "@componentsHomePage": path.resolve("src/web/components/home"),
             "@componentsNotfound": path.resolve("src/web/components/notfound"),
             "@routes": path.resolve("src/web/routes"),
+            "@models": path.resolve("src/web/models"),
         },
         extensions: ['.tsx', '.ts', '.js', '.css']
     },

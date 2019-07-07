@@ -13,7 +13,7 @@ const UserBehaviorABC = lazy(() =>
     //  @ts-ignore
     import(/* webpackChunkName:"contentpage" */"@componentsUserBehavior/abc"),
 );
-console.log(UserBehaviorABC);
+// console.log(UserBehaviorABC);
 export const routes: RouteProps[] = [
     {
         path: '/abc',

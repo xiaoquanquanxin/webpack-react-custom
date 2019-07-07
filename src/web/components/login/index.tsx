@@ -2,6 +2,9 @@ import * as React from "react";
 import "./index.css";
 import {MyInput, MyButton} from '../input';
 
+import YdStore from "@models/YdStore";
+
+
 document.cookie = "token=; expires=Thu, 01 Jan 1970 00:00:00 GMT";
 const Login = () => {
     return <>

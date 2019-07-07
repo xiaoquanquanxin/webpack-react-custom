@@ -53,7 +53,8 @@
       ],
       "@routes": [
         "web/routes"
-      ]
+      ],
+      "@models/*": ["web/models/*"]
     }
   },
   "files": [

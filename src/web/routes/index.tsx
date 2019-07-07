@@ -57,14 +57,14 @@ export const routes: RouteProps[] = [
     }
 ];
 
-const Routes = () => (
+const Routes = (token: string) => (
     <Suspense fallback={<span>xxx</span>}>
         <Header/>
         <Switch>
-            {routes.map((r) => {
-                const token = getToken();
+            {routes.map((r, index) => {
+                // const token = getToken();
                 const {path, exact, component} = r;
-                // console.log(token);
+                console.log(`token ${token}`, `🦌`, `index ${index}`);
                 const LazyCom = component;
                 return (
                     <Route

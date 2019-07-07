@@ -26,6 +26,7 @@
     "gulp-babel": "^8.0.0",
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.1",
+    "koa-static": "^5.0.0",
     "transform-runtime": "^0.0.0"
   },
   "dependencies": {
