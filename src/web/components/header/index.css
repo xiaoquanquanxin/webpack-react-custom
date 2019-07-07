@@ -1,7 +1,27 @@
-li {
+.main-menu li {
     list-style-type: none;
     float: left;
-    margin: 0 10px;
+    padding: 5px 15px;
+    background-color: lightblue;
+}
+
+.main-menu {
+    position: relative;
+}
+
+.main-menu::after {
+    content: '';
+    display: block;
+    width: 30px;
+    height: 100%;
+    position: absolute;
+    background: lightblue;
+    top: 0;
+    right: -30px;
+}
+
+.main-menu._act_last::after {
+    border-radius: 0 0 0 15px;
 }
 
 a:hover, a:active, a:link, a:link, a {
@@ -13,4 +33,26 @@ a:hover, a:active, a:link, a:link, a {
     clear: both;
     display: block;
     content: '';
+}
+
+.main-menu {
+    display: inline-block;
+    padding: 0;
+    background-color: lightblue;
+    background: linear-gradient(to bottom, lightblue, lightblue, white, white);
+}
+
+.main-menu ._act {
+    background-color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.main-menu ._act_prev {
+    background-color: lightblue;
+    border-radius: 0 0 10px 0;
+}
+
+.main-menu ._act_next {
+    background-color: lightblue;
+    border-radius: 0 0 0 10px;
 }

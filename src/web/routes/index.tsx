@@ -1,4 +1,5 @@
 import * as React from "react";
+import {getToken} from '../tools/tools'
 // @ts-ignore
 import {Route, Switch, RouteProps, Redirect, Link} from "react-router-dom";
 import Header from '@componentsHeader';
@@ -58,13 +59,12 @@ export const routes: RouteProps[] = [
 ];
 
 const Routes = (token: string) => (
-    <Suspense fallback={<span>xxx</span>}>
+    <Suspense fallback={<span>loading..................</span>}>
         <Header/>
         <Switch>
             {routes.map((r, index) => {
-                // const token = getToken();
                 const {path, exact, component} = r;
-                console.log(`token ${token}`, `🦌`, `index ${index}`);
+                console.log(`getToken ${getToken()}`,`token ${token}`, `🦌`, `index ${index}`);
                 const LazyCom = component;
                 return (
                     <Route
@@ -93,18 +93,5 @@ const Routes = (token: string) => (
         </Switch>
     </Suspense>
 );
-
-//  获取token
-function getToken() {
-    const tokenArr = document.cookie.split("; ");
-    // console.log(tokenArr);
-    for (let i = 0; i < tokenArr.length; i++) {
-        const arr = tokenArr[i].split("=");
-        if (arr[0] === "token") {
-            return arr[1];
-        }
-    }
-    return "";
-}
 
 export {Routes};

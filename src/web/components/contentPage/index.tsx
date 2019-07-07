@@ -1,6 +1,15 @@
 import * as React from "react";
 
+
+const {useContext} = React;
+import YdStore from "@models/YdStore";
+
+
 const ContentPage = () => {
+
+    const ydstore = useContext(YdStore);
+    // console.log(ydstore.token);
+
     return <>
         <h3>content page - 记录项目的bug与blog</h3>
         <br/>
