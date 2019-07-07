@@ -4,13 +4,13 @@ import * as ReactDOM from 'react-dom';
 
 
 import {Footer} from '@componentsFooter';
-import {App} from './page';
+import {Page} from './page';
 
 const appElement = document.getElementById('app');
 
 ReactDOM.render(
     <>
-        <App/>
+        <Page/>
         <Footer/>
     </>, appElement);
 

@@ -26,10 +26,6 @@
     "gulp-babel": "^8.0.0",
     "gulp-tslint": "^8.1.4",
     "gulp-typescript": "^5.0.1",
-    "inversify-koa-utils": "^1.0.0",
-    "koa-bodyparser": "^4.2.1",
-    "koa-static": "^5.0.0",
-    "koa-swig": "^2.2.1",
     "transform-runtime": "^0.0.0"
   },
   "dependencies": {
@@ -54,6 +50,7 @@
     "jest-stare": "^1.16.0",
     "koa": "^2.7.0",
     "koa-session": "^5.12.0",
+    "koa2-connect-history-api-fallback": "^0.1.2",
     "mini-css-extract-plugin": "^0.7.0",
     "mobx": "^5.10.1",
     "mobx-react-lite": "^1.4.0",
