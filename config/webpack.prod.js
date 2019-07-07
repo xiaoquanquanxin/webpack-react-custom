@@ -7,7 +7,7 @@ console.log('webpack.prod.js     //loading .....................................
 console.log('webpack.prod.js     //loading ........................................');
 console.log('webpack.prod.js     //loading ........................................');
 console.log('webpack.prod.js     //loading ........................................');
-module.exports = merge(webpackCommon, {
+const webpackProdConfiguration = merge(webpackCommon, {
     mode: 'production',
     optimization: {
         minimizer: [
@@ -16,3 +16,4 @@ module.exports = merge(webpackCommon, {
         ]
     },
 });
+module.exports = webpackProdConfiguration;
