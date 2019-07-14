@@ -53,6 +53,13 @@ module.exports = {
                 // exclude: /node_modules/,
                 use: cssLoaders
             },
+            {
+                test: /\.(png|jpe?g|gif|ico)(\?\S*)?$/,
+                loader: 'file-loader',
+                query: {
+                    name: 'img/[name].[ext]'
+                }
+            }
         ]
     },
     resolve: {

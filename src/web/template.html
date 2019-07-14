@@ -6,11 +6,39 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <link rel="manifest" href="./manifest.json">
 </head>
 <body>
 <div id="app"></div>
-<script type="text/javascript" src="https://cdn.staticfile.org/react/16.9.0-alpha.0/umd/react.development.js"></script>
-<script type="text/javascript" src="https://cdn.staticfile.org/react-router-dom/5.0.0/react-router-dom.js"></script>
-<script type="text/javascript" src="https://cdn.staticfile.org/mobx/5.9.4/mobx.umd.js"></script>
+<script type="text/javascript"
+        src="https://cdn.staticfile.org/react/16.9.0-alpha.0/umd/react.production.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/react-router-dom/5.0.0/react-router-dom.min.js"></script>
+<script type="text/javascript" src="https://cdn.staticfile.org/mobx/5.9.4/mobx.umd.min.js"></script>
+<script>
+    // if ("serviceWorker" in navigator) {
+    //     console.log("当前控制权", navigator.serviceWorker.controller);
+    //     navigator.serviceWorker.register("./sw.js").then((resistration) => {
+    //         //登记成功
+    //         console.log("登记成功");
+    //         console.log("serviceWorker注册成功，范围为：", resistration.scope)
+    //     }).catch((err) => {
+    //         console.log("serviceWorker登记失败", err);
+    //     });
+    // }
+</script>
+<script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker
+                .register('./service-wroker.js')
+                .then(registration => {
+                    console.log('SW registered: ', registration);
+                })
+                .catch(registrationError => {
+                    console.log('SW registration failed: ', registrationError);
+                });
+        });
+    }
+</script>
 </body>
 </html>

@@ -22,6 +22,7 @@
   "homepage": "https://github.com/xiaoquanquanxin/webpack-react-custom#readme",
   "devDependencies": {
     "babel-runtime": "^6.26.0",
+    "file-loader": "^4.0.0",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-tslint": "^8.1.4",
